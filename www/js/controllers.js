@@ -8,7 +8,10 @@ angular
     vm.form = {};
 
     vm.submit = () => {
-      console.log(vm.form);
-    }
+      var form = vm.form;
+
+      form['fullName'] = `${form.firstName} ${form.lastName}`;
+      console.log(form);
+    };
 
   });

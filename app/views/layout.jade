@@ -8,8 +8,10 @@ html(lang="en-US", ng-app="exitInterview")
     link(rel="stylesheet", href="lib/bootstrap/dist/css/bootstrap.css")
     link(rel="stylesheet", href="_styles/main.css")
   body
-    include partials/header
+    .row
+      include partials/header
 
-    block content
+    .row
+      block content
 
     include partials/scripts

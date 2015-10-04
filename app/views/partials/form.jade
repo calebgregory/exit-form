@@ -1,23 +1,22 @@
-.container
-  form(name="interview")
-    .form-group
-      label.control-label First Name
-      input.form-control(type="text", ng-model="form.firstName")
-    .form-group
-      label.control-label Last Name
-      input.form-control(type="text", ng-model="form.lastName")
-    .form-group
-      label.control-label email
-      input.form-control(type="text", ng-model="form.email")
-    .form-group
-      label.control-label How satisfied were you with this company?
-      select.form-control(ng-model="form.satisfaction")
-        option 1
-        option 2
-        option 3
-        option 4
-        option 5
-    .form-group
-      label.control-label Please explain
-      textarea.form-control(rows="3" ng-model="form.explanation")
-    button.btn.btn-default(ng-click="submit()") Submit
+form(name="interview")
+  .form-group
+    label.control-label First Name
+    input.form-control(type="text", ng-model="form.firstName")
+  .form-group
+    label.control-label Last Name
+    input.form-control(type="text", ng-model="form.lastName")
+  .form-group
+    label.control-label email
+    input.form-control(type="text", ng-model="form.email")
+  .form-group
+    label.control-label How satisfied were you with this company?
+    select.form-control(ng-model="form.satisfaction")
+      option 1
+      option 2
+      option 3
+      option 4
+      option 5
+  .form-group
+    label.control-label Please explain
+    textarea.form-control(rows="3" ng-model="form.explanation")
+  button.btn.btn-default(ng-click="submit()") Submit

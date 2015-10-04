@@ -1,8 +1,9 @@
 'use strict';
 
-var express = require('express');
-var less    = require('less-middleware');
-var morgan  = require('morgan');
+var bodyParser  = require('body-parser');
+var express     = require('express');
+var less        = require('less-middleware');
+var morgan      = require('morgan');
 
 var app     = module.exports = express();
 
@@ -16,6 +17,12 @@ app.set('view engine', 'jade');
 app.use(less('www'));
 
 app.use(morgan('dev'));
+
+app.use(bodyParser.urlencoded({
+  extended : true,
+  type     : '*/x-www-form-urlencoded'
+}));
+app.use(bodyParser.json());
 
 app.use(express.static('www'));
 app.use('/', routes);

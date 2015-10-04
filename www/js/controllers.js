@@ -2,7 +2,7 @@
 
 angular
   .module('exitInterview')
-  .controller('FormCtrl', ($scope) => {
+  .controller('FormCtrl', ($scope, Submission) => {
     var vm = $scope;
 
     vm.form = {};
@@ -11,7 +11,9 @@ angular
       var form = vm.form;
 
       form['fullName'] = `${form.firstName} ${form.lastName}`;
-      console.log(form);
+      Submission.submit(form, (data) => {
+        console.log(data);
+      });
     };
 
   });

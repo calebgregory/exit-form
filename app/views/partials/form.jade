@@ -1,0 +1,11 @@
+form(name="interview")
+  .form-group
+    label.control-label First Name
+    input.form-control(type="text", ng-model="form.firstName")
+  .form-group
+    label.control-label Last Name
+    input.form-control(type="text", ng-model="form.lastName")
+  .form-group
+    label.control-label email
+    input.form-control(type="text", ng-model="form.email")
+  button.btn.btn-default(ng-click="submit()") Submit

@@ -2,17 +2,13 @@
 
 angular
   .module('exitInterview')
-  .controller('IndexCtrl', ($scope, $http) => {
+  .controller('FormCtrl', ($scope) => {
     var vm = $scope;
 
-    vm.people = [
-      {
-        name: 'bill beaux',
-        age: 111
-      },
-      {
-        name: 'fro deaux',
-        age: 43
-      }
-    ];
+    vm.form = {};
+
+    vm.submit = () => {
+      console.log(vm.form);
+    }
+
   });

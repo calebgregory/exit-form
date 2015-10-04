@@ -6,7 +6,10 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'partials/index',
-        controller: 'IndexCtrl',
+      })
+      .when('/form', {
+        templateUrl: 'partials/form',
+        controller: 'FormCtrl',
         controllerAs: 'ctrl'
       })
       .otherwise({

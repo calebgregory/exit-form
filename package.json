@@ -1,0 +1,27 @@
+{
+  "name": "exit-form",
+  "version": "1.0.0",
+  "description": "A little form for exit interviews",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calebgregory/exit-form.git"
+  },
+  "author": "Caleb Gregory <calebgregory@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/calebgregory/exit-form/issues"
+  },
+  "homepage": "https://github.com/calebgregory/exit-form#readme",
+  "dependencies": {
+    "babel": "^5.8.23",
+    "errorhandler": "^1.4.2",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "less-middleware": "^2.0.1",
+    "morgan": "^1.6.1"
+  }
+}

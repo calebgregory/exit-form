@@ -1,7 +1,12 @@
 'use strict';
 
-exports.submit = (req, res) => {
+var Submission = require('../models/Submission');
 
-  console.log(req.body);
-  res.send('hello');
-}
+exports.submit = (req, res) => {
+  var form = req.body;
+
+  Submission.submit(req.body, (err, data) => {
+    if(err) throw err;
+    res.send(data);
+  });
+};

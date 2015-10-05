@@ -1,0 +1,25 @@
+.row
+  .col-xs-12.instruction
+    h2 Thank you
+    p Thank you for taking the time to give us feedback, {{data.firstName}}.
+    p Your submission is listed below.
+
+.row
+  .col-xs-12
+    .panel.panel-default
+      .panel-heading
+        p Submission
+      .panel-body
+        .list-group
+          .list-group-item
+            h5.list-group-item-heading Name
+            p.list-group-item-text {{data.firstName}} {{data.lastName}}
+          .list-group-item
+            h5.list-group-item-heading Email
+            p.list-group-item-text {{data.email}}
+          .list-group-item
+            h5.list-group-item-heading Satisfaction
+            p.list-group-item-text {{data.satisfaction}}
+          .list-group-item
+            h5.list-group-item-heading Explanation
+            p.list-group-item-text {{data.explanation}}

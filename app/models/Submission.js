@@ -9,7 +9,7 @@ exports.submit = (data, cb) => {
     client.query(
       'INSERT INTO submissions("firstName", "lastName", "fullName", "email", "satisfaction", "explanation") '+
       'VALUES ($1, $2, $3, $4, $5, $6)',
-      [data.firstName, data.lastName, data.fullName, data.email, data.satisfaction, data.explanation]
+      [data.firstName, data.lastName, data.fullName, data.email, data.satisfaction, data.explanation || null]
     );
 
     var output;

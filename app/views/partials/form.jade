@@ -1,16 +1,16 @@
 form(name="interview")
   .form-group
     label.control-label First Name
-    input.form-control(type="text", ng-model="form.firstName")
+    input.form-control(type="text", ng-model="form.firstName" required)
   .form-group
     label.control-label Last Name
-    input.form-control(type="text", ng-model="form.lastName")
+    input.form-control(type="text", ng-model="form.lastName" required)
   .form-group
     label.control-label email
-    input.form-control(type="text", ng-model="form.email")
+    input.form-control(type="text", ng-model="form.email" required)
   .form-group
     label.control-label How satisfied were you with this company?
-    select.form-control(ng-model="form.satisfaction")
+    select.form-control(ng-model="form.satisfaction" required)
       option 1
       option 2
       option 3

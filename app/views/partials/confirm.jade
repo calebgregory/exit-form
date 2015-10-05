@@ -1,0 +1,25 @@
+.row
+  .col-xs-10.col-xs-offset-1.instruction
+    h2 Please confirm your submission and edit or submit below.
+
+.row
+  .col-xs-12
+    .list-group
+      .list-group-item
+        h4.list-group-item-heading Name
+        p.list-group-item-text {{form.firstName}} {{form.lastName}}
+      .list-group-item
+        h4.list-group-item-heading Email
+        p.list-group-item-text {{form.email}}
+      .list-group-item
+        h4.list-group-item-heading Satisfaction
+        p.list-group-item-text {{form.satisfaction}}
+      .list-group-item
+        h4.list-group-item-heading Explanation
+        p.list-group-item-text {{form.explanation}}
+
+.row
+  .col-xs-5.col-xs-offset-1
+    button.btn.btn-default.btn-lg.btn-block(type="button" ng-click="edit()") Edit
+  .col-xs-5
+    button.btn.btn-primary.btn-lg.btn-block(type="button" ng-click="submit()") Submit

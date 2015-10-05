@@ -2,6 +2,28 @@ body {
   background: @background-color;
 }
 
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+ul.menu {
+  li+li:before {
+    content: '|';
+    display: border-box;
+    padding: 0 25% 0 5%;
+  }
+
+  margin: 24px 0;
+  float: right;
+}
+
+
 a {
   text-decoration: none;
+}
+
+img {
+  margin: 25% 0;
+  width: 100%;
 }

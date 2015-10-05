@@ -1,5 +1,7 @@
 # exit-form
-A little form for exit interviews
+### A little form for exit interviews
+
+This app simply accepts submissions for exit interviews and sends them to a relational database.
 
 # Usage
 

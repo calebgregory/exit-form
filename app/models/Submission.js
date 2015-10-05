@@ -2,6 +2,9 @@ var pg = require('pg');
 var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/interviews';
 
 exports.submit = (data, cb) => {
+
+  data['fullName'] = `${data.firstName} ${data.lastName}`;
+
   pg.connect(connectionString, (err, client, done) => {
     client.query(
       'INSERT INTO submissions("firstName", "lastName", "fullName", "email", "satisfaction", "explanation") '+

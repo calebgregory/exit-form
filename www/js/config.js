@@ -12,6 +12,16 @@ angular
         controller: 'FormCtrl',
         controllerAs: 'ctrl'
       })
+      .when('/confirm', {
+        templateUrl: 'partials/confirm',
+        controller: 'ConfirmCtrl',
+        controllerAs: 'ctrl'
+      })
+      .when('/exit', {
+        templateUrl: 'partials/exit',
+        controller: 'ExitCtrl',
+        controllerAs: 'ctrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

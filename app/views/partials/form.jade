@@ -1,16 +1,16 @@
 form(name="interview")
-  .form-group
+  .form-group(ng-class="{'has-success': interview.firstName.$dirty && form.firstName.length > 1, 'has-error': interview.firstName.$dirty && !form.firstName}")
     label.control-label First Name
-    input.form-control(type="text", ng-model="form.firstName" required)
-  .form-group
+    input.form-control(name="firstName", type="text", placeholder="John", ng-model="form.firstName" required)
+  .form-group(ng-class="{'has-success': interview.lastName.$dirty && form.lastName.length > 1, 'has-error': interview.lastName.$dirty && !form.lastName}")
     label.control-label Last Name
-    input.form-control(type="text", ng-model="form.lastName" required)
-  .form-group
+    input.form-control(name="lastName", type="text", placeholder="Doe", ng-model="form.lastName" required)
+  .form-group(ng-class="{'has-success': interview.email.$dirty && form.email.length > 1 && !interview.$error.email, 'has-error': interview.email.$dirty && !form.email || interview.$error.email}")
     label.control-label email
-    input.form-control(type="text", ng-model="form.email" required)
-  .form-group
+    input.form-control(name="email", type="email", placeholder="john@doe.com", ng-model="form.email" required)
+  .form-group(ng-class="{'has-success': interview.satisfaction.$dirty && form.satisfaction, 'has-error': interview.satisfaction.$touched && !form.satisfaction}")
     label.control-label How satisfied were you with this company?
-    select.form-control(ng-model="form.satisfaction" required)
+    select.form-control(name="satisfaction", ng-model="form.satisfaction" required)
       option 1
       option 2
       option 3
@@ -19,4 +19,4 @@ form(name="interview")
   .form-group
     label.control-label Please explain
     textarea.form-control(rows="3" ng-model="form.explanation")
-  button.btn.btn-default(ng-click="next()") Next
+  button.btn.btn-default(ng-click="interview.$valid && next()", ng-disabled="interview.$invalid") Next

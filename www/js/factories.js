@@ -2,10 +2,10 @@
 
 angular
   .module('exitInterview')
-  .factory('Submission', ($http) => {
+  .factory('Submission', function($http) {
     return {
       form: {},
-      submit: (form, cb) => {
+      submit: function(form, cb) {
         $http
           .post('/api/post', form)
           .success(cb);

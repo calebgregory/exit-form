@@ -3,28 +3,28 @@
 angular
   .module('exitInterview')
 
-  .controller('FormCtrl', ($scope, $location, Submission) => {
+  .controller('FormCtrl', function($scope, $location, Submission) {
     var vm = $scope;
 
     vm.form = Submission.form;
 
-    vm.next = () => {
+    vm.next = function() {
       Submission.form = vm.form;
       $location.path('/confirm');
     };
   })
 
-  .controller('ConfirmCtrl', ($scope, $location, Submission) => {
+  .controller('ConfirmCtrl', function($scope, $location, Submission) {
     var vm = $scope;
 
     vm.form = Submission.form;
 
-    vm.edit = () => {
+    vm.edit = function() {
       $location.path('/form')
     }
 
-    vm.submit = () => {
-      Submission.submit(vm.form, data => {
+    vm.submit = function() {
+      Submission.submit(vm.form, function(data) {
         // what if data is null?
         Submission.form = data;
         $location.path('/exit');
@@ -32,7 +32,7 @@ angular
     }
   })
 
-  .controller('ExitCtrl', ($scope, Submission) => {
+  .controller('ExitCtrl', function($scope, Submission) {
     var vm = $scope;
 
     vm.data = Submission.form;

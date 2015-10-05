@@ -2,7 +2,7 @@
 
 angular
   .module('exitInterview')
-  .config(($routeProvider) => {
+  .config(function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'partials/index',

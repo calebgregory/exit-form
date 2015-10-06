@@ -10,6 +10,7 @@ This app simply accepts submissions for exit interviews and sends them to a rela
 Clone the repo:
 ```
 $ git clone https://github.com/calebgregory/exit-form.git
+$ cd exit-form
 ```
 
 and begin by installing the dependencies:
